@@ -1,4 +1,4 @@
-export default (store) => ({
+export default () => ({
   path : 'counter',
   /*  Async getComponent is only invoked when route matches   */
   getComponent (nextState, cb) {
@@ -7,7 +7,7 @@ export default (store) => ({
     require.ensure([], (require) => {
       /*  Webpack - use require callback to define
           dependencies for bundling   */
-      const Counter = require('./containers/CounterContainer').default
+      const Counter = require('./Counter').default
       /*  Return getComponent   */
       cb(null, Counter)
 
