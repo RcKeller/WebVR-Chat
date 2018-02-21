@@ -1,5 +1,0 @@
-@import '../../css/layout';
-
-.page {
-  @apply --page;
-}

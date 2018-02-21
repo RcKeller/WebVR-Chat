@@ -1,31 +1,28 @@
 {
-  "ecmaFeatures": {
-    "jsx": true,
-    "es6": true,
-    "classes": true
-  },
-  "env": {
-    "browser": true,
-    "node": true,
-    "mocha": true
-  },
   "parser": "babel-eslint",
-  "parserOptions": {
-    "ecmaVersion": 2017,
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true,
-      "experimentalObjectRestSpread": true
-    }
+  "extends": [
+    "standard",
+    "standard-react"
+  ],
+  "plugins": [
+    "babel",
+    "react",
+    "promise"
+  ],
+  "env": {
+    "browser" : true
   },
-  "plugins": ["react"],
-  "extends": ["standard", "standard-react"],
   "globals": {
-    "__DEVSERVER__": true,
-    "__DEVCLIENT__": true
+    "__DEV__"      : false,
+    "__TEST__"     : false,
+    "__PROD__"     : false,
+    "__COVERAGE__" : false
   },
   "rules": {
-    "import/first": 0,
-    "react/no-unused-prop-types": 0
+    "key-spacing"          : "off",
+    "jsx-quotes"           : [2, "prefer-single"],
+    "max-len"              : [2, 120, 2],
+    "object-curly-spacing" : [2, "always"],
+    "comma-dangle"         : "off"
   }
 }

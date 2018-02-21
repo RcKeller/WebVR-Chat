@@ -1,11 +1,7 @@
+.DS_STORE
+*.log
 node_modules
-public
-compiled
-config/*
-security
-logs
-npm-debug.log
-.tmp
-.idea
-*.swp
-.vscode
+dist
+coverage
+.idea/
+.yarn-cache
